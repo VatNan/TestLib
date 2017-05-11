@@ -19,4 +19,9 @@ public class RNTestLibModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNTestLib";
   }
+
+    @ReactMethod
+    public void testText(String msg, Callback cb) {
+      cb.invoke("Hello: " + msg);
+    }
 }
